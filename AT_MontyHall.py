@@ -31,17 +31,17 @@ def finish_game(lista,choice,change):
 			if (lista[i] != 'GOAT_MONTY') and (i != choice):
 				return lista[i]
 
-
+listb =[]
 #Simulacion del juego
+a = 0
+b = 0
 for i in range (100):
 	choose = choose_door()
-	a = 0
-	b = 0
 	if ('car' == finish_game(reveal_door(sort_doors(),choose),choose,True)):
-		a = a+1
-		print a
+		a = a+1.0
 	if ('car' == finish_game(reveal_door(sort_doors(),choose),choose,False)):
-		b = b+1
+		b = b+1.0
 print 'Cambiando de puerta la probabilidad de ganar es' , a/100.0
 print 'Sin cambiar de puerta la probabilidad de ganar es' , b/100.0
+
 	
